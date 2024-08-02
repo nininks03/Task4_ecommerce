@@ -1,0 +1,19 @@
+<div class="product">
+    <div class="row">
+        @for (item of products; track item.id) {
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{item.image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{item.title.slice(0,30)}}</h5>
+                      <br>
+                      <h4 class="card-text" style="font-weight: 700;">${{item.price}}</h4> 
+                      <p class="card-text">{{item.rating.rate}}&nbsp;({{item.rating.count}})</p>   
+                                    
+                      <a routerLink="{{item.id}}" class="btn btn-primary">Visit</a>
+                    </div>
+                  </div>
+            </div>
+        }
+    </div>
+</div>
